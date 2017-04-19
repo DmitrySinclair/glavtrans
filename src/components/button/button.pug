@@ -1,0 +1,7 @@
+mixin button(href, name)
+    if href.length > 0
+        a(href=href, class!=attributes.class)= name
+            include ../../images/svg/right-arrow-2.svg
+    else
+        button(class!=attributes.class, id!=attributes.id, type!=attributes.type)= name
+            include ../../images/svg/right-arrow-2.svg

@@ -1,0 +1,82 @@
+include ../button/button
+
+.portfolio-steps
+    .portfolio-steps__step-links
+        a.portfolio-steps__step(href="#modal-step-1")
+            p.portfolio-steps__title Шаг 1
+            p.portfolio-steps__desc.
+                Настройка IP телефонии, для того, чтобы маркетолог
+                смог разработать маркетинговые сценарии
+            +button("", "подробнее")(class="button button--green")
+
+        a.portfolio-steps__step(href="#modal-step-1")
+            p.portfolio-steps__title Шаг 2
+            p.portfolio-steps__desc.
+                Настройка IP телефонии, для того, чтобы маркетолог
+                смог разработать маркетинговые сценарии
+            +button("", "подробнее")(class="button button--green")
+
+        a.portfolio-steps__step(href="#modal-step-3")
+            p.portfolio-steps__title Шаг 3
+            p.portfolio-steps__desc.
+                Настройка IP телефонии, для того, чтобы маркетолог
+                смог разработать маркетинговые сценарии
+            +button("", "подробнее")(class="button button--green")
+
+        a.portfolio-steps__step(href="#modal-step-4")
+            p.portfolio-steps__title Шаг 4
+            p.portfolio-steps__desc.
+                Настройка IP телефонии, для того, чтобы маркетолог
+                смог разработать маркетинговые сценарии
+            +button("", "подробнее")(class="button button--green")
+
+    .portfolio-steps__content
+        .portfolio-steps__modal#modal-step-1
+            .portfolio-steps__content-head
+                p.portfolio-steps__title Шаг 1
+                p.portfolio-steps__desc.
+                    Настройка IP телефонии, для того, чтобы маркетолог
+                    смог разработать маркетинговые сценарии
+
+            .portfolio-steps__content-body
+                ol.portfolio-steps__content-list
+                    li #[span.num 1.] Сценарий приема входящий звонков (скрипты для менеджеров).
+                    li #[span.num 2.] Сценарии работы с клиентской базой, чтобы ДЕЛИКАТНО связываться с пациентом и приглашать на необходимое плановое лечение.
+
+                h3.portfolio-steps__content-header Что такое маркетинговые сценарии
+
+                h4.portfolio-steps__content-second-header Что такое маркетинговые сценарии
+
+                ol.portfolio-steps__content-list
+                    li #[span.num 1.] Арендован номер для настройки телефонии.
+                    li #[span.num 2.] Настроена обработка очереди звонков. Тестирование звонков. На этом этапе телефония уже полностью в рабочем состоянии.
+                    li #[span.num 3.] Найден и куплен телефонный аппарат и доп. трубки к нему.
+                    li #[span.num 4.] Подключен телефонный аппарат. Тестирование звонков через него.
+                    li #[span.num 5.] Настроена переадресация звонков с существующих номеров (Ростелеком) на номер, арендованный в Б24. Тем самым все звонки поступают на один телефон.
+
+                +button("", "закрыть")(class="button button--green button--without-arrow button--center content-close")
+
+        .portfolio-steps__modal#modal-step-2
+            .portfolio-steps__content-head
+                p.portfolio-steps__title Шаг 2
+                p.portfolio-steps__desc.
+                    Настройка IP телефонии, для того, чтобы маркетолог
+                    смог разработать маркетинговые сценарии
+
+            .portfolio-steps__content-body
+                ol.portfolio-steps__content-list
+                    li #[span.num 1.] Сценарий приема входящий звонков (скрипты для менеджеров).
+                    li #[span.num 2.] Сценарии работы с клиентской базой, чтобы ДЕЛИКАТНО связываться с пациентом и приглашать на необходимое плановое лечение.
+
+                h3.portfolio-steps__content-header Что такое маркетинговые сценарии
+
+                h4.portfolio-steps__content-second-header Что такое маркетинговые сценарии
+
+                ol.portfolio-steps__content-list
+                    li #[span.num 1.] Арендован номер для настройки телефонии.
+                    li #[span.num 2.] Настроена обработка очереди звонков. Тестирование звонков. На этом этапе телефония уже полностью в рабочем состоянии.
+                    li #[span.num 3.] Найден и куплен телефонный аппарат и доп. трубки к нему.
+                    li #[span.num 4.] Подключен телефонный аппарат. Тестирование звонков через него.
+                    li #[span.num 5.] Настроена переадресация звонков с существующих номеров (Ростелеком) на номер, арендованный в Б24. Тем самым все звонки поступают на один телефон.
+
+                +button("", "закрыть")(class="button button--green button--without-arrow button--center content-close")

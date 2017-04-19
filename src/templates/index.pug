@@ -1,0 +1,13 @@
+doctype html
+html
+  include ./include/head.pug
+  +head("Главная")
+  body
+    .wrapper
+      include ../components/header/header
+      +header(true)
+      main
+        include ../components/news-list/news-list
+        include ../components/main-about/main-about
+        
+      include ../components/footer/footer

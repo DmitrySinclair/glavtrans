@@ -1,0 +1,25 @@
+.search
+    .search__top
+        form.search__form.template-width#search-form
+            input.search__form-field#search-field(type="text", placeholder="Поиск по сайту")
+            button.search__form-submit#search-submit(type="submit")
+                include ../../images/svg/magnifying-glass.svg
+
+    .search__nav.template-width
+        p.search__results-title Результаты поиска:
+        ul.search__results-nav-items
+            li
+                span.active Все
+            li
+                a(href="#") Блог
+            li
+                a(href="#") Новости
+
+    .search__results.template-width
+        .search__results-block
+            h2.search__block-title Новости компании
+            include ../news-list-search/news-list-search
+
+        .search__results-block
+            h2.search__block-title Блог
+            include ../blog-search/blog-search

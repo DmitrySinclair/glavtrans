@@ -1,0 +1,141 @@
+.social-block {
+  position: absolute;
+  right: 0;
+  top: 1.875em;
+
+  width: 60px;
+  height: 60px;
+
+  &:hover {
+    .social-block__content {
+      will-change: width;
+    }
+
+    .social-block__content:not(.social-block__content--open) {
+      transition: .25s ease-out;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.075);
+    }
+  }
+}
+
+.social-block__content {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0 0 0 20px;
+
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  list-style: none;
+  transition: .2s ease-in;
+
+  li {
+    opacity: 0;
+    flex-basis: 120px;
+    max-width: 120px;
+    margin-right: 24px;
+    transition: 0s;
+
+    a {
+      display: flex;
+      align-items: center;
+      opacity: 0.8;
+      transition: .2s ease-in;
+
+      &:hover {
+        opacity: 1;
+        transition: .25s ease-out;
+      }
+    }
+
+    svg {
+      width: 26px;
+      height: 26px;
+      margin-right: 15px;
+
+      path {
+        fill: #606060;
+      }
+    }
+
+    span {
+      font-size: 1.125rem;
+      color: #2e2e2e;
+    }
+  }
+
+  &--open {
+    width: 542px;
+    border-radius: 6px;
+
+    li {
+      opacity: 1;
+      transition: .25s ease-out .2s;
+    }
+  }
+}
+
+.social-block__button {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:after,
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    transition: .2s ease-in;
+    content: "";
+  }
+
+  &:after {
+    background: url('../images/main/social.png') no-repeat center;
+  }
+
+  &:before {
+    opacity: 0;
+    background: url('../images/main/close.png') no-repeat center;
+  }
+
+  &--open {
+    &:after,
+    &:before {
+      transition: opacity .25s ease-out;
+    }
+
+    &:after {
+      opacity: 0;
+    }
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

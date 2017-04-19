@@ -1,0 +1,115 @@
+/* Main
+***************************/
+
+.inner-page {
+  padding: 200px 0;
+
+  @media only screen and (max-width: 1500px) {
+    padding: 125px 0;
+  }
+}
+
+
+
+/* Overflow
+***************************/
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Container
+***************************/
+
+.template-width {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+
+/* Link inheritance
+***************************/
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Box-sizing with inheritance
+***************************/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* Style text selection
+***************************/
+::selection {
+  background: rgba(46, 198, 247, 0.33);
+}
+::-moz-selection {
+  background: rgba(46, 198, 247, 0.33);
+}
+
+
+/* Placeholder
+***************************/
+
+::-webkit-input-placeholder {color: #83838d; transition: color .2s; opacity: 1;}
+::-moz-placeholder          {color: #83838d; transition: color .2s; opacity: 1;}
+:-moz-placeholder           {color: #83838d; transition: color .2s; opacity: 1;}
+:-ms-input-placeholder      {color: #83838d; transition: color .2s; opacity: 1;}
+
+input:focus::-webkit-input-placeholder {color:rgba(0,0,0,0);}
+input:focus::-moz-placeholder          {color:rgba(0,0,0,0);}
+input:focus:-moz-placeholder           {color:rgba(0,0,0,0);}
+input:focus:-ms-input-placeholder      {color:rgba(0,0,0,0);}
+
+input.error::-webkit-input-placeholder {color: #e01f63;}
+input.error::-moz-placeholder          {color: #e01f63;}
+input.error:-moz-placeholder           {color: #e01f63;}
+input.error:-ms-input-placeholder      {color: #e01f63;}
+
+textarea.error::-webkit-input-placeholder {color: #e01f63;}
+textarea.error::-moz-placeholder          {color: #e01f63;}
+textarea.error:-moz-placeholder           {color: #e01f63;}
+textarea.error:-ms-input-placeholder      {color: #e01f63;}
+
+
+/* Images
+***************************/
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* Images
+***************************/
+
+html.hide-scroll {
+  overflow: hidden;
+
+  body {
+    margin-right: 15px;
+    overflow: visible;
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    body {
+      margin-right: 0;
+    }
+  }
+}

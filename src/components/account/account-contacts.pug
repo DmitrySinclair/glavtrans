@@ -1,0 +1,52 @@
+include ../button/button
+.account.template-width
+    form.account__content#account-contacts
+        h2.account__title Контакты
+
+        .account-prime-info#contacts-fields
+            .account-prime-info__block
+                label.account-prime-info__label(for="contacts-name") Ваш телефон
+                .account-prime-info__field
+                    input.account-prime-info__input#contacts-name(type="text", value="8 800 000 00 00", disabled)
+                    button.account-prime-info__button
+
+            .account-prime-info__block
+                label.account-prime-info__label(for="contacts-email") Ваша e-mail
+                .account-prime-info__field
+                    input.account-prime-info__input#contacts-email(type="text", value="user@gmail.com", disabled)
+                    button.account-prime-info__button
+
+        +button("", "сохранить изменения")(class="contacts__submit button button--green button--without-arrow", type="submit", id="contacts-submit")
+
+    .account__aside
+        ul.account__nav
+            li
+                a(href="/dist/html/account.html") Информация о пользователе
+
+            li
+                span.active Контакты
+
+            li
+                a(href="/dist/html/account-subscription.html") Подписка
+
+        .account__info
+            .account__info-top
+                p.account__info-name Иванов Иван
+                div.account__info-img(style="background-image: url('../images/blog/author-big.jpg')")
+
+            ul.account__info-main
+                li
+                    span.account__info-key компания
+                    span.account__info-value «Стройграндмегаком»
+
+                li
+                    span.account__info-key телефон
+                    span.account__info-value 8 800 000 00 00
+
+                li
+                    span.account__info-key e-mail
+                    span.account__info-value user@gmail.com
+
+                li
+                    span.account__info-key подписка оформлена
+                    span.account__info-value «Раздел Блог» user@gmail.com

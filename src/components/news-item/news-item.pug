@@ -1,0 +1,29 @@
+section.news-item.template-width
+    div.news-item__header
+        p.news-item__num # 256
+        h2.news-item__title Отчет о проведенном семинаре по Битрикс24 в Иркутске
+
+    div.news-item__body
+        img.news-item__img(src="../images/news/pug.jpg")
+        p.news-item__p.
+            У меня дома стоит Amazon’s Echo, Wi-Fi колонка, которая постоянно слушает.
+            Она отлично распознает мою речь, даже когда я кричу из соседней комнаты.
+            Echo стала центром нашего семейного досуга. И заставила меня задуматься о том,
+            как изменится дизайн и природа взаимодействия пользователя с ним.
+        h3.news-item__content-header Что в итоге получилось?
+        p.news-item__p.
+            Но через пару лет пришли хулители из Java (которая не Script) и рассказали,
+            что все, что мы делаем — дерьмо. И на сервере код наш — дерьмо. И на клиенте — дерьмо.
+            И браузеры наши — дерьмо. И вся веб-разработка дерьмо. Впрочем, доля горькой
+            правды в этом была. Браузеры того времени и впрямь были удивительными механизмами.
+
+    div.news-item__footer
+        span.news-item__likes
+            button.news-item__like-plus#like-button
+                include ../../images/svg/like-of-filled-heart.svg
+            span 100
+        span.news-item__views
+            include ../../images/svg/eye.svg
+            span 1025
+
+        include ../social-block/social-block

@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Поиск")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Поиск")
+            main.inner-page
+                include ../components/search/search
+
+            include ../components/footer/footer

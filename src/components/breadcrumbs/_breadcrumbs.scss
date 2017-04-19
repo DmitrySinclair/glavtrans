@@ -1,0 +1,40 @@
+.breadcrumbs {
+  padding-bottom: 3.3334em;
+
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.1111;
+
+  .breadcrumbs__el {
+    display: inline-block;
+    transition: .2s ease-in;
+
+    &:not(:last-child) {
+      margin-right: 1.3333em;
+    }
+
+    svg,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    svg {
+      margin-right: .722222222em;
+    }
+
+    path {
+      fill: #fff;
+      transition: .2s ease-in;
+    }
+  }
+
+  a.breadcrumbs__el:hover {
+    path,
+    & {
+      opacity: .85;
+      transition: .25s ease-out;
+    }
+  }
+}

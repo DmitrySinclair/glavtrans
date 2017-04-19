@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Портфолио")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Портфолио", "Комплексное внедрение Битрикс24 ", "/dist/html/portfolio.html")
+            main.inner-page
+                include ../components/portfolio-item/portfolio-item
+
+            include ../components/footer/footer

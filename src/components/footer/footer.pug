@@ -1,0 +1,47 @@
+footer
+    include ../../components/to-top/to-top
+    include ../../components/footer-callback/footer-callback
+    .footer
+        .footer__wrap.template-width
+            .footer__top
+                a.footer__logo(href="/dist/html/index.html")
+                    include ../../images/svg/main-logo.svg
+                    span.footer__logo-text Внедряем Битрикс24
+
+                ul.footer__nav
+                    li
+                        a(href="checkout.html") Портфолио
+                    li
+                        a(href="checkout.html") Блог
+                    li
+                        a(href="logistics.html") Услуги
+                    li
+                        a(href="logistics.html") Новости
+                    li
+                        a(href="credit.html") Форум
+                    li
+                        a(href="credit.html") О компании
+                    li
+                        a(href="credit.html") Вебинары
+                    li
+                        a(href="credit.html") Контакты
+
+                include ../search-footer/search-footer
+
+            ul.footer-social
+                li
+                    a(href="#", target="_blank").footer-social__icon
+                        include ../../images/svg/fb.svg
+                li
+                    a(href="#", target="_blank").footer-social__icon
+                        include ../../images/svg/vk.svg
+                li
+                    a(href="#", target="_blank").footer-social__icon
+                        include ../../images/svg/yt.svg
+
+            .footer__meta
+                span.footer__copy © 2013-2017 «Мегамир ИТ».
+                a.footer__agree(href="#") Соглашение об использовании сайта
+
+script(src="../app/vendor.js")
+script(src="../app/main.js")

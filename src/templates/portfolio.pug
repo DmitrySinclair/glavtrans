@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Портфолио")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Портфолио")
+            main.inner-page
+                include ../components/portfolio/portfolio
+
+            include ../components/footer/footer

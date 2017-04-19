@@ -1,0 +1,123 @@
+include ../button/button
+
+.portfolio-item
+    .template-width
+        h2.portfolio-item__title Комплексное внедрение#[br] Битрикс24
+
+    .portfolio-item__header.template-width
+        h3.portfolio-item__subtitle Компания
+        p.portfolio-item__text Стоматологическая клиника Жемчужная.
+        p.portfolio-item__text Клиника жемчужная оказывает широкий спектр стоматологческих услуг как для взрослых, так и для детей. Работает на рынке более 18 лет.
+        img.portfolio-item__img(src="/dist/images/portfolio/portfolio-item.png")
+
+        ul.portfolio-item__main-info
+            li.portfolio-item__main-info-block
+                h4.portfolio-item__main-info-title Цель внедрения Битрикс24
+                p.portfolio-item__main-info-text Увеличение оборота клиники без вложений в рекламу.
+
+            li.portfolio-item__main-info-block
+                h4.portfolio-item__main-info-title Редакция Битрикс24
+                p.portfolio-item__main-info-text CRM: Облачная версия Битрикс24 Тариф: Проект+
+
+            li.portfolio-item__main-info-block
+                h4.portfolio-item__main-info-title Бюджет на внедрение
+                p.portfolio-item__main-info-text Бюджет: от 150 000 руб.
+
+    .portfolio-item__body
+        .portfolio-item__services.template-width
+            h3.portfolio-item__subtitle Услуга
+            a.portfolio-item__service-item
+                p.portfolio-item__service-item-title Комплексное внедрение Битрикс24 под ключ
+                button.portfolio-item__service-item-button подробнее
+
+        .portfolio-item__tasks.template-width
+            h3.portfolio-item__subtitle Задачи
+            ol.portfolio-item__tasks-row
+                li.portfolio-item__tasks-item
+                    span.portfolio-item__tasks-num 1
+                    p.portfolio-item__tasks-content.
+                        Поменять покупательские критерии выбора, чтобы главным фактором была не цена,
+                        а качество предоставляемых услуг и соответственно увеличить % людей, которые
+                        записываются на прием
+
+                li.portfolio-item__tasks-item
+                    span.portfolio-item__tasks-num 2
+                    p.portfolio-item__tasks-content.
+                        Наладить #[span.green проактивную работу] с клиентами (работу с клиентской базой),
+                        чтобы они не уходили в другие клиники
+
+            .portfolio-item__tasks-info.template-width
+                button.portfolio-item__tasks-info-button
+                    include ../../images/svg/info-sign.svg
+                .portfolio-item__tasks-info-content
+                    p.portfolio-item__tasks-info-p.
+                        Раньше звонили в клинику и спрашивали: «сколько стоит пломба?»,  администратор говорил – 2700 руб, в ответ звучало – «спасибо, до свидания!».
+                        Потенциальные клиенты сравнивали все клиники только по цене, хотя это совершено неправильный подход.
+                    p.portfolio-item__tasks-info-p.
+                        Сравнивая клиник только по цене, они не понимали, чем одна клиника отличается от другой и где услуги качественнее.
+                    p.portfolio-item__tasks-info-p.
+                        А так как клиника Жемчужная оказывает качественные услуги, необходимо было перевести разговор из области стоимости в сторону качества предоставляемых услуг.
+
+
+        .portfolio-item__result.template-width
+            h3.portfolio-item__subtitle Результат
+
+            ul.portfolio-item__results
+                li.
+                    На 40% увеличилась эффективность приема
+                    входящих звонков.
+
+                li.
+                    Ежедневно клинику стали посещать
+                    пациенты, которые ранее не планировали
+                    этого делать.
+
+                li.
+                    Рекламные бюджеты клиники остались
+                    неизменны, а оборот вырос.
+
+            img.portfolio-item__result-image(src="/dist/images/portfolio/laptop.png")
+
+        .portfolio-item__result-after
+            .template-width.portfolio-item__result-after-cont
+                p.portfolio-item__result-text.
+                    Да, потребовались РАЗОВЫЕ инвестиции на внедрение Битрикс24, но они уже давно окупились.
+            img.portfolio-item__result-conc-img(src="/dist/images/portfolio/result-conlusion.png")
+
+
+        .portfolio-item__steps.template-width
+
+            h3.portfolio-item__subtitle Ход проекта (что было выполнено)
+            p.portfolio-item__text.portfolio-item__text--max-width.
+                Крайне рекомендуем Вам ознакомиться со следующими статьями перед прочтением информации о ходе проекта:
+            .portfolio-item__link-block
+                p.portfolio-item__text.portfolio-item__text--white.portfolio-item__text--without-margin.
+                    Комплексное внедрение CRM системы или как преодолеть сопротивление сотрудников при внедрении CRM системы.
+                +button("dist/html/about.html", "подробнее")(class="button")
+
+            include ../portfolio-steps/portfolio-steps
+
+
+        .portfolio-item__summary.template-width
+            h3.portfolio-item__subtitle.portfolio-item__subtitle--center Резюме / Что было сделано
+
+            ul.portfolio-summury
+                li.portfolio-summury__item Разработаны маркетинговые сценарии
+                li.portfolio-summury__item Настроена телефония
+                li.portfolio-summury__item Разработаны скрипты для менеджеров
+                li.portfolio-summury__item Подготовлены инструкции
+                li.portfolio-summury__item Разработаны сценарии работы в Битрикс24
+                li.portfolio-summury__item Сотрудники обучены работе в Битрикс24
+                li.portfolio-summury__item Настроена работа в Битрикс24
+                li.portfolio-summury__item Сотрудникам проведен тренинг по приему входящих звонков
+
+
+
+    .portfolio-item__footer
+        // Form
+        include ../portfolio-form/portfolio-form
+
+        .portfolio-item__navigation.template-width
+            .portfolio-item__navigation-wrap
+                +button("/dist/html/portfolio-item.html", "предыдущий проект")(class="button button--gray button--prev")
+                +button("/dist/html/portfolio-item.html", "следующий проект")(class="button button--gray button--next")

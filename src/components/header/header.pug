@@ -1,0 +1,31 @@
+mixin header(isMain, pageName, secondDepthName, secondDepthLink)
+    header(class=isMain?"header header--main":"header", style="background-color: #0066a1;")
+        .top-menu
+            .top-menu__content.template-width
+                a.main-logo(href="/dist/html/index.html")
+                    include ../../images/svg/main-logo.svg
+                    span.main-logo__text Внедряем Битрикс24
+                ul.main-nav
+                    li
+                        a(href="portfolio.html") Портфолио
+                    li
+                        a(href="services.html") Услуги
+                    li
+                        a(href="contacts.html") Контакты
+                ul.main-buttons
+                    //li
+                    //    a.main-buttons__account(href="account-main.html")
+                    //        include ../../images/svg/avatar.svg
+                    include ../account-header/account-header
+                    include ../search-header/search-header
+                    include ../hidden-menu/hidden-menu
+
+        if isMain
+            include ../slider/slider
+        else
+            .template-width.header__page-info
+                h1.header__pagename= pageName
+                include ../breadcrumbs/breadcrumbs
+                +breadcrumbs(pageName, secondDepthName, secondDepthLink)
+
+    include ../mobile-menu/mobile-menu

@@ -1,0 +1,34 @@
+div.footer-callback
+    .template-width.footer-callback__wrap
+        div.footer-callback__descr
+            p.footer-callback__title Обратная связь
+            p.footer-callback__text Остались вопросы? Мы свяжемся с Вами
+
+        //
+            All actions with form must be performed with 500ms delay
+            so success animation have time to be shown
+            As example: ajax submit or next step after success
+            validation
+
+        form.footer-callback__form#footer-callback
+            div.footer-callback__steps
+                div.footer-callback__step#step-1
+                    input(type="text", placeholder="Ваше имя")
+                    span.footer-callback__icon
+                        span.footer-callback__bad
+                            include ../../images/svg/bad.svg
+                        span.footer-callback__good
+                            include ../../images/svg/good.svg
+                div.footer-callback__step#step-2
+                    input(type="tel", placeholder="Ваш телефон")
+                    span.footer-callback__icon
+                        span.footer-callback__bad
+                            include ../../images/svg/bad.svg
+                        span.footer-callback__good
+                            include ../../images/svg/good.svg
+            button.footer-callback__button#callback-submit(type="submit")
+                include ../../images/svg/mail.svg
+
+        div.success-message#success-message(style="display: none;")
+            h3.success-message__header #[span#success-name Иван], Ваша заявку принята!
+            p.success-message__text Мы свяжемся с Вами в ближайшее время

@@ -1,0 +1,147 @@
+.news-item {
+  margin-top: -100px;
+
+  @media only screen and (max-width: 1500px) {
+    margin-top: -25px;
+  }
+}
+
+.news-item__header {
+  text-align: center;
+  margin-bottom: 4.3125em;
+}
+
+.news-item__num {
+  margin: 0 0 2em;
+  color: #83838d;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.news-item__title {
+  margin: 0 auto;
+  max-width: 16.133333333em;
+  color: #2e2e2e;
+  line-height: 1.166666667;
+}
+
+.news-item__body,
+.news-item__footer {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.news-item__p,
+.news-item__img,
+.news-item__content-header {
+  margin: 0 0 4.375rem;
+}
+
+.news-item__content-header,
+.news-item__p {
+  color: #2e2e2e;
+  line-height: 1.7;
+}
+
+.news-item__p {
+  font-size: 1.25rem;
+}
+
+.news-item__content-header {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.news-item__footer {
+  border-top: 1px solid #83838d;
+  padding-top: 1.875em;
+}
+
+.news-item__likes,
+.news-item__views {
+  margin-right: 40px;
+
+  button, span, svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    line-height: 60px;
+    color: #83838d;
+    font-weight: 600;
+  }
+}
+
+.news-item__like-plus {
+  position: relative;
+
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  background-color: #e91d62;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  transition: box-shadow .2s ease-in, background .03s ease-in;
+
+  &:hover {
+    transition: .25s ease-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  svg {
+    transition: .05s ease-in;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 24px;
+    height: 22px;
+    margin: auto;
+  }
+
+  path {
+    fill: #fff;
+  }
+
+  &:active {
+    svg {
+      transition: .075s ease-out;
+      transform: scale(1.25);
+    }
+  }
+
+  &--liked {
+    transition: .05s ease-out !important;
+    background-color: #83838d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+  }
+}
+
+.news-item__views {
+  svg {
+    margin-right: 10px;
+  }
+
+  path {
+    fill: #83838d;
+  }
+}
+
+.news-item__footer {
+  position: relative;
+}

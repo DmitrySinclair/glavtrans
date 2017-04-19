@@ -1,0 +1,218 @@
+.contacts-form {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-form__wrap {
+  width: 100%;
+}
+
+.contacts-form__heading,
+.contacts-form__p {
+  margin: 0;
+  color: #2e2e2e;
+}
+
+.contacts-form__heading {
+  margin-bottom: 2.7777em;
+  color: #2e2e2e;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contacts-form__p {
+  margin-bottom: 3em;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+.contacts-form__step {
+  position: relative;
+  margin-bottom: 30px;
+
+  label {
+    display: block;
+    padding-left: 23px;
+    margin-bottom: 15px;
+    color: #83838d;
+    font-size: 1.125rem;
+    line-height: 1;
+  }
+}
+
+.contacts-form__icon,
+.contacts-form__bad,
+.contacts-form__good {
+  position: absolute;
+  bottom: 15px;
+  margin: auto;
+}
+
+textarea + .contacts-form__icon,
+textarea + .contacts-form__icon .contacts-form__bad,
+textarea + .contacts-form__icon .contacts-form__good {
+  top: 26px;
+  bottom: auto;
+}
+
+.contacts-form__icon {
+  right: 20px;
+  width: 20px;
+  bottom: 0;
+  height: 20px;
+}
+
+.contacts-form__submit {
+  width: 370px;
+  margin-top: 30px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.contacts-form__bad,
+.contacts-form__good {
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .2s ease-in;
+}
+
+.success + .contacts-form__icon .contacts-form__good,
+.error + .contacts-form__icon .contacts-form__bad{
+  opacity: 1;
+  transition: .25s ease-out;
+}
+
+.contacts-form__form input,
+.contacts-form__form textarea {
+  width: 100%;
+  height: 3.75em;
+  padding: 0 1.25em;
+
+  border: 1px solid #83838d;
+  background-color: #fff;
+  border-radius: 6px;
+  border-radius: 6px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.contacts-form__form textarea {
+  height: 120px;
+  resize: none;
+  padding: 1em 1.25em;
+}
+
+.contacts-form__button {
+  height: 3.75em;
+  width: 7.5em;
+  max-width: 7.5em;
+  background-color: #8cc63f;
+  border: none;
+  cursor: pointer;
+
+  transition: .2s ease-in;
+
+  &:hover {
+    background-color: #90CB40;
+    transition: .25s ease-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  svg {
+    pointer-events: none;
+  }
+
+  path {
+    fill: #fff;
+  }
+}
+
+// Modal
+.success-modal {
+  .fancybox-bg {
+    background-color: #000;
+  }
+
+  &.fancybox-container--ready .fancybox-bg {
+    opacity: 0.5 !important;
+  }
+
+  .fancybox-close-small {
+    right: 18px;
+    top: 18px;
+    width: 24px;
+    height: 24px;
+    background: url('../images/svg/cancel.svg');
+    color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.success-message {
+  padding: 60px 100px;
+
+  color: #404040;
+  text-align: center;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+
+.success-message__header {
+  margin: 0 0 1.25em;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: .9;
+}
+
+.success-message__text {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 1220px) {
+  .contacts-form__form {
+    flex-basis: 400px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contacts-form {
+    padding-bottom: 2.5em;
+  }
+
+  .contacts-form__descr {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 1.875em;
+  }
+
+  .contacts-form__title {
+    margin-bottom: 0.8333em;
+  }
+
+  .contacts-form__button {
+    width: 6.25em;
+  }
+
+  .contacts-form__steps {
+    width: calc(100% - 6.25em);
+  }
+
+  .success-message {
+    padding: 60px 30px;
+  }
+}

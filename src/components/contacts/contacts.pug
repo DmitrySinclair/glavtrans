@@ -1,0 +1,29 @@
+.contacts.template-width
+    script(src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full")
+    .map#map(style="height: 500px")
+
+    .contacts__row
+        .contacts__left
+            h3.contacts__header Наш адрес
+            p.contacts__p.
+                Иркутск, 664039, ул. Терешковой, 15Б
+                БЦ «Чайка»
+            p.contacts__p.
+                Рабочее время: с 09:00 - 18:00, пн-пт
+            p.contacts__p.
+                +7 (3952) 668 461 #[br]
+                +7 (499) 350 35 87
+            p.contacts__p.
+                e-mail: expert@mmit.ru
+
+            h3.contacts__header Мы в социальных сетях
+            include ../social/social
+
+        .contacts__right
+            include ../contacts-form/contacts-form
+
+
+
+
+
+.contacts__right

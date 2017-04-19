@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Новости компании")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Новости компании", "Отчет о проведенном семинаре", "/dist/html/news.html")
+            main.inner-page
+                include ../components/news-item/news-item
+
+            include ../components/footer/footer

@@ -1,0 +1,24 @@
+mixin row(itemCount)
+    .services__row
+        - for (var x = 0; x < itemCount; x++)
+            a.services__item(href="/dist/html/services-item.html")
+                h3.services__item-label Купить Битрикс24 с дополнительными бонусами
+                    span.services__item-ind
+                        include ../../images/svg/bottom.svg
+                p.services__item-text.
+                    У меня дома стоит Amazon’s Echo, Wi-Fi колонка, которая постоянно слушает.
+                    Она отлично распознает мою речь, даже когда я кричу из соседней комнаты.
+                    Echo стала центром нашего семейного досуга. И заставила меня задуматься о том,
+                    как изменится дизайн и природа взаимодействия пользователя с ним.
+
+
+
+.services.template-width
+    +row(3)
+
+    .services__block
+        h3.services__item-label Комплексное внедрение Битрикс24 под ключ
+        .services__wrapper
+            +row(4)
+
+    +row(3)

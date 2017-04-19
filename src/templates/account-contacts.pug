@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Личный кабинет")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Личный кабинет")
+            main.inner-page
+                include ../components/account/account-contacts
+
+            include ../components/footer/footer

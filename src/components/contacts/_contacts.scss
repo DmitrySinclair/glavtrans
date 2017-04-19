@@ -1,0 +1,30 @@
+.contacts__row {
+  margin-top: 70px;
+  display: flex;
+}
+
+.contacts__left {
+  flex-basis: 42.735%;
+  padding-right: 135px;
+  border-right: 1px solid #83838d;
+}
+
+.contacts__right {
+  flex-basis: 57.265%;
+  padding-left: 100px;
+}
+
+.contacts__header {
+  margin: 0 0 1.6666em;
+  color: #2e2e2e;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contacts__p {
+  margin: 0 0 2em;
+  color: #2e2e2e;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}

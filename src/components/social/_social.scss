@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  li {
+    width: 60px;
+    height: 60px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.social__icon {
+  display: block;
+  height: 100%;
+
+  transition: $ease-end;
+
+  &:hover {
+    transition: $ease-start;
+    opacity: 0.85;
+  }
+
+  &--fb svg path {
+    fill: #3b5998;
+  }
+
+  &--vk svg path {
+    fill: #507299;
+  }
+
+  &--yt svg path {
+    fill: #e62117;
+  }
+}
