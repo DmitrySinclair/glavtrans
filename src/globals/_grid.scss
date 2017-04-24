@@ -1,0 +1,19 @@
+$gutter: 2.564102564%;
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$gutter;
+}
+
+.grid__col {
+    margin-right: $gutter;
+
+    &--25 {
+        flex-basis: calc(25% - #{$gutter});
+    }
+
+    &--50 {
+        flex-basis: calc(50% - #{$gutter});
+    }
+}

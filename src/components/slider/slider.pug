@@ -1,50 +1,43 @@
 include ../button/button
 
-.slider.template-width
-    .slider__cont
-        .slider__el(data-color="#0066a1")
-            .slider__content
-                p.slider__title-main.
-                    Комплексно внедряем
-                    облачную и коробочную
-                    версии Битрикс 24
-                p.slider__title-add.
-                    Настраиваем, пишем инструкции, обучаем
-                    сотрудников
-                +button("dist/html/service-item.html", "перейти к услуге")(class="button")
-            img.slider__img(src="../images/main/slider-image.png")
-        .slider__el(data-color="#4990e2")
-            .slider__content
-                p.slider__title-main.
-                    Настраиваем Битрикс24
+.slider
+    .image-slider
+        .image-slider__item(style="background-image: url('/dist/images/slider/1.jpg');")
+        .image-slider__item(style="background-image: url('/dist/images/slider/2.jpg');")
+        .image-slider__item(style="background-image: url('/dist/images/slider/3.jpg');")
 
-                p.slider__title-add.
-                    Настраиваем, пишем инструкции, обучаем
-                    сотрудников
-                +button("dist/html/service-item.html", "перейти к услуге")(class="button")
-            img.slider__img(src="../images/main/slider-image.png")
-        .slider__el(data-color="#2f536b")
-            .slider__content
-                p.slider__title-main.
-                    Пишем инструкции и
-                    обучаем работе с
-                    Битрикс24
 
-                p.slider__title-add.
-                    Настраиваем, пишем инструкции, обучаем
-                    сотрудников
-                +button("dist/html/service-item.html", "перейти к услуге")(class="button")
-            img.slider__img(src="../images/main/slider-image.png")
-        .slider__el(data-color="#0c7cac")
-            .slider__content
-                p.slider__title-main.
-                    Моделируем и
-                    автоматизируем
-                    бизнес процессы
+    .svg-layer
+        include ../path/path.svg 
 
-                p.slider__title-add.
-                    Настраиваем, пишем инструкции, обучаем
-                    сотрудников
-                +button("dist/html/service-item.html", "перейти к услуге")(class="button")
-            img.slider__img(src="../images/main/slider-image.png")
-    .slider__controls
+    .text-slider.template-width
+        .text-slider__cont
+            .text-slider__el
+                .text-slider__content
+                    p.text-slider__title-main.
+                        Контейнерные перевозки
+                    p.text-slider__title-add.
+                        Мы ориентируемся на потребности клиентов нашей компании и гарантируем 
+                        высокое качество услуг
+                    +button("dist/html/service-item.html", "подробнее")(class="btn btn--primary btn--fix-width")
+
+            .text-slider__el
+                .text-slider__content
+                    p.text-slider__title-main.
+                        Перевозка промышленной техники
+                    p.text-slider__title-add.
+                        Мы ориентируемся на потребности клиентов нашей компании и гарантируем 
+                        высокое качество услуг
+                    +button("dist/html/service-item.html", "подробнее")(class="btn btn--primary btn--fix-width")
+
+            .text-slider__el
+                .text-slider__content
+                    p.text-slider__title-main.
+                        Перевозка лесных грузов
+                    p.text-slider__title-add.
+                        Мы ориентируемся на потребности клиентов нашей компании и гарантируем 
+                        высокое качество услуг
+                    +button("dist/html/service-item.html", "подробнее")(class="btn btn--primary btn--fix-width")
+
+        .text-slider__controls.template-width
+            .text-slider__arrows

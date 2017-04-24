@@ -92,10 +92,12 @@ gulp.task('js:vendor', function() {
     src + '/libs/jquery/jquery-3.1.0.js',
     src + '/libs/slick/slick.js',
     src + '/libs/scroll/scroll.js',
-    src + '/libs/headroom/headroom.js',
-    src + '/libs/fancybox3/jquery.fancybox.min.js',
-    src + '/libs/baron/baron.js',
-    src + '/libs/scrollreveal/scrollreveal.min.js',
+    // src + '/libs/headroom/headroom.js',
+    // src + '/libs/fancybox3/jquery.fancybox.min.js',
+    // src + '/libs/baron/baron.js',
+    // src + '/libs/scrollreveal/scrollreveal.min.js',
+    src + '/libs/gsap/TweenMax.min.js',
+    src + '/libs/gsap/MorphSVGPlugin.min.js',
   ])
   .pipe(concat('vendor.js'))
   .pipe(uglify())
@@ -107,32 +109,11 @@ gulp.task('js:vendor', function() {
 
 gulp.task('js:main', function() {
   return gulp.src([
-    src + '/components/search-header/search-header.js',
     src + '/components/header/header.js',
     src + '/components/slider/slider.js',
-    src + '/components/news-list/news-list.js',
-    src + '/components/footer-callback/footer-callback.js',
     src + '/components/to-top/to-top.js',
     src + '/components/button/button.js',
-    src + '/components/news-list-inner/news-list-inner.js',
-    src + '/components/news-item/news-item.js',
-    src + '/components/social-block/social-block.js',
-    src + '/components/services/services.js',
-    src + '/components/mobile-menu/mobile-menu.js',
-    src + '/components/search-footer/search-footer.js',
-    src + '/components/portfolio-steps/portfolio-steps.js',
-    src + '/components/portfolio-form/portfolio-form.js',
-    src + '/components/portfolio-item/portfolio-item.js',
-    src + '/components/services-item/services-item.js',
-    src + '/components/services-form/services-form.js',
-    src + '/components/blog/blog.js',
-    src + '/components/blog-item/blog-item.js',
-    src + '/components/comment/comment.js',
-    src + '/components/contacts/contacts.js',
-    src + '/components/contacts-form/contacts-form.js',
-    src + '/components/search/search.js',
-    src + '/components/account/account.js',
-    src + '/components/account-header/account-header.js',
+    src + '/components/path/path.js',
   ])
   .pipe(concat('main.js'))
   // .pipe(uglify())

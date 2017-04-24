@@ -1,7 +1,12 @@
 mixin button(href, name)
-    if href.length > 0
-        a(href=href, class!=attributes.class)= name
-            include ../../images/svg/right-arrow-2.svg
-    else
-        button(class!=attributes.class, id!=attributes.id, type!=attributes.type)= name
-            include ../../images/svg/right-arrow-2.svg
+    div.btn__wrap
+        if href.length > 0
+            a(href=href, class!=attributes.class, data-text=name)
+                span.btn__overlay
+                span.btn__text= name
+                
+        else
+            button(id!=attributes.id, class!=attributes.class, data-text=name, type!=attributes.type)
+                span.btn__overlay
+                span.btn__text= name
+            

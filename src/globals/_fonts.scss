@@ -3,35 +3,8 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1,
-h2,
-.hidden-num__label,
-.footer-callback__title,
-.success-message__header,
-.portfolio__header,
-.portfolio__label,
-.portfolio-item__subtitle,
-.portfolio-item__main-info-title,
-.portfolio-form__heading,
-.services-form__heading {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-}
-
-.portfolio-item__subtitle,
-.portfolio-item__main-info-title {
+.text-slider__title-main,
+.hidden-nav:not(.hidden-nav--footer) a {
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
-}
-
-h2 {
-  margin: 0 0 1em;
-  font-size: 3.75rem;
-  line-height: 1.15;
-}
-
-@media only screen and (max-width: 1024px) {
-  h2 {
-    font-size: 1.875rem;
-    margin-bottom: 2em;
-  }
 }

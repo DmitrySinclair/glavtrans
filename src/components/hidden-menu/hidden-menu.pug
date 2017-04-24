@@ -1,37 +1,32 @@
-li.hidden-wrap
-    div.hidden-menu#hidden-menu
-        a.hidden-menu__close(href="#!")
-        .hidden-menu__row
-            .hidden-menu__col
-                a.hidden-logo(href="/dist/html/index.html")
-                    include ../../images/svg/hidden-logo.svg
-                    span.hidden-logo__text Внедряем Битрикс24
-                a.hidden-num(href="tel:78003503587")
-                    span.hidden-num__label Единый номер:
-                    span.hidden-num__phone +7 (800) 350 35 87
-                include ../social/social
+div.hidden-menu#hidden-menu
+    //- a.hidden-menu__close(href="#!")
+    ul.hidden-nav
+        li
+            a.menu__link(href="/dist/html/services.html").
+                #[span.link__layer(data-text="услуги")]
+                услуги
 
-            .hidden-menu__col
-                ul.hidden-nav
-                    li
-                        a(href="/dist/html/portfolio.html") Портфолио
-                    li
-                        a(href="/dist/html/blog.html") Блог
-                    li
-                        a(href="/dist/html/services.html") Услуги
-                    li
-                        a(href="/dist/html/news.html") Новости
-                    li
-                        a(href="/dist/html/forum.html") Форум
-                    li
-                        a(href="/dist/html/about.html") О компании
-                    li
-                        a(href="/dist/html/vebinars.html") Вебинары
-                    li
-                        a(href="/dist/html/contacts.html") Контакты
+        li
+            a.menu__link(href="/dist/html/info.html").
+                #[span.link__layer(data-text="полезная информация")]
+                полезная информация
 
-    a.main-buttons__menu(href="#hidden-menu")
-        div(class="humburger", id="nav-icon")
-            span
-            span
-            span
+        li
+            a.menu__link(href="/dist/html/reviews.html").
+                #[span.link__layer(data-text="отзывы")]
+                отзывы
+
+        li
+            a.menu__link(href="/dist/html/about.html").
+                #[span.link__layer(data-text="о компании")]
+                о компании
+
+        li
+            a.menu__link(href="/dist/html/contacts.html").
+                #[span.link__layer(data-text="контакты")]
+                контакты
+     
+
+
+
+

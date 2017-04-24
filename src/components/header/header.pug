@@ -1,31 +1,30 @@
 mixin header(isMain, pageName, secondDepthName, secondDepthLink)
-    header(class=isMain?"header header--main":"header", style="background-color: #0066a1;")
+    header(class=isMain?"header header--main":"header")
         .top-menu
             .top-menu__content.template-width
                 a.main-logo(href="/dist/html/index.html")
                     include ../../images/svg/main-logo.svg
-                    span.main-logo__text Внедряем Битрикс24
-                ul.main-nav
-                    li
-                        a(href="portfolio.html") Портфолио
-                    li
-                        a(href="services.html") Услуги
-                    li
-                        a(href="contacts.html") Контакты
+                    .main-logo__wrap
+                        span.main-logo__text ГлавТранс
+                        span.main-logo__text-sub Готовое бизнес решение есть всегда
+
+                a.main-tel(href="tel:83952763100")
+                    include ../../images/svg/phone-receiver.svg
+                    span 8 3952 763 100
+
                 ul.main-buttons
-                    //li
-                    //    a.main-buttons__account(href="account-main.html")
-                    //        include ../../images/svg/avatar.svg
-                    include ../account-header/account-header
-                    include ../search-header/search-header
-                    include ../hidden-menu/hidden-menu
+                    li
+                        include ../hidden-menu/hidden-menu
+                        a.main-buttons__menu(href="#hidden-menu")
+                            p.main-buttons__label Меню сайта
+                            .btn__wrap
+                                .btn.btn--primary.btn--rect
+                                    div.humburger#nav-icon
+                                        span
+                                        span
+                                        span
 
         if isMain
             include ../slider/slider
         else
             .template-width.header__page-info
-                h1.header__pagename= pageName
-                include ../breadcrumbs/breadcrumbs
-                +breadcrumbs(pageName, secondDepthName, secondDepthLink)
-
-    include ../mobile-menu/mobile-menu

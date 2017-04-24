@@ -1,47 +1,125 @@
 footer
-    include ../../components/to-top/to-top
-    include ../../components/footer-callback/footer-callback
+    //- include ../../components/to-top/to-top
     .footer
         .footer__wrap.template-width
-            .footer__top
-                a.footer__logo(href="/dist/html/index.html")
-                    include ../../images/svg/main-logo.svg
-                    span.footer__logo-text Внедряем Битрикс24
+            .footer__top.grid__row
+                .grid__col.grid__col--25
+                    a(href="/dist/html/index.html").footer__logo
+                        include ../../images/svg/main-logo.svg
+                        span ГлавТранс
 
-                ul.footer__nav
-                    li
-                        a(href="checkout.html") Портфолио
-                    li
-                        a(href="checkout.html") Блог
-                    li
-                        a(href="logistics.html") Услуги
-                    li
-                        a(href="logistics.html") Новости
-                    li
-                        a(href="credit.html") Форум
-                    li
-                        a(href="credit.html") О компании
-                    li
-                        a(href="credit.html") Вебинары
-                    li
-                        a(href="credit.html") Контакты
+                    p.footer__copy.
+                        ООО «ГлавТранс» © 2017 #[br]
+                        Все права сохранены. #[br]
+                        Использование материалов сайта без
+                        согласования запрещено.
 
-                include ../search-footer/search-footer
+                    .footer__contact
+                        span.footer__city Иркутск
+                        span.footer__num 8 3952 763 100
+                        span.footer__email glavtrans@inbox.ru
+                        span.footer__street ул. Байкальская, 295/2
 
-            ul.footer-social
-                li
-                    a(href="#", target="_blank").footer-social__icon
-                        include ../../images/svg/fb.svg
-                li
-                    a(href="#", target="_blank").footer-social__icon
-                        include ../../images/svg/vk.svg
-                li
-                    a(href="#", target="_blank").footer-social__icon
-                        include ../../images/svg/yt.svg
+                    p.footer__year 2008-2017
 
-            .footer__meta
-                span.footer__copy © 2013-2017 «Мегамир ИТ».
-                a.footer__agree(href="#") Соглашение об использовании сайта
+                .grid__col.grid__col--50
+                    h3.footer__services-title 
+                        a(href="/dist/html/services.html") Услуги
+                    ul.footer__services
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Доставка лесопродукции
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Лесная деятельность
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Доставка техники
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Доставка металлоконструкций
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Доставка сыпучих грузов
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Доставка негабаритных грузов
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Контейнерные перевозки
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Предоставление подвижного состава
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Разработка и согласование эскизов и схем
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Выполнение функций грузоотправителя и 
+                                грузополучателя
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Мультимодальные перевозки (смешанные 
+                                виды транспорта)
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Услуги по оптимизации сокращения срока 
+                                доставки груза до станции назначения
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Консультационные, платежно-финансовые 
+                                услуги по перевозкам и оформлению 
+                                документов
+                        li
+                            a(href="/dist/html/services-item.html").
+                                Аутсорсинг транспортных услуг
+
+                .grid__col.grid__col--25
+                    ul.hidden-nav.hidden-nav--footer
+                        li
+                            a.menu__link(href="/dist/html/info.html").
+                                #[span.link__layer.link__layer--footer(data-text="Полезная информация")]
+                                Полезная информация
+
+                        li
+                            a.menu__link(href="/dist/html/documents.html").
+                                #[span.link__layer.link__layer--footer(data-text="Документы")]
+                                Документы
+
+
+                        li
+                            a.menu__link(href="/dist/html/reviews.html").
+                                #[span.link__layer.link__layer--footer(data-text="Отзывы")]
+                                Отзывы
+
+                        li
+                            a.menu__link(href="/dist/html/about.html").
+                                #[span.link__layer.link__layer--footer(data-text="О компании")]
+                                О компании
+
+                        li
+                            a.menu__link(href="/dist/html/history.html").
+                                #[span.link__layer.link__layer--footer(data-text="История компании")]
+                                История компании
+
+                        li
+                            a.menu__link(href="/dist/html/rules.html").
+                                #[span.link__layer.link__layer--footer(data-text="Правила")]
+                                Правила
+
+                        li
+                            a.menu__link(href="/dist/html/contacts.html").
+                                #[span.link__layer.link__layer--footer(data-text="Контакты")]
+                                Контакты
+     
+                        
+
+                    a.footer__dev(href="https://mmit.ru/", target="_blank")
+                        include ../../images/svg/mmit.svg
+                        span Разработка сайта
+
+
+                
 
 script(src="../app/vendor.js")
 script(src="../app/main.js")
