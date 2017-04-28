@@ -7,6 +7,8 @@
         $('.hidden-menu').toggleClass('hidden-menu--open');
         $('.wrapper').toggleClass('wrapper--overlay');
         $('html').toggleClass('hide-scroll');
+        $('.main-tel').toggleClass('main-tel--hidden');
+        $('.main-logo').toggleClass('main-logo--white');
         $(document).on('keyup', handleEscMenu);
 
         setTimeout(function() {
@@ -25,6 +27,8 @@
         $('.hidden-menu').removeClass('hidden-menu--open');
         $('.wrapper').removeClass('wrapper--overlay');
         $('html').removeClass('hide-scroll');
+        $('.main-tel').removeClass('main-tel--hidden');
+        $('.main-logo').removeClass('main-logo--white');
         $(document).off('click', closeMenu);
     }
 

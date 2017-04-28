@@ -6,7 +6,7 @@
 }
 
 .top-menu__content {
-  position: relative;
+  position: relative; 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -15,13 +15,22 @@
 }
 
 .main-logo {
+  z-index: 1;
+  position: relative;
   display: flex;
   width: 400px;
 
   svg {
     width: 88px;
     height: 100px;
+  }
 
+  path {
+    transition: fill .15s ease-in-out;
+  }
+
+  // Default color on hover
+  &--white:not(:hover) {
     path {
       fill: #fff;
     }
@@ -235,6 +244,7 @@
 .main-tel {
   display: flex;
   align-items: center;
+  transition: .15s ease;
 
   svg {
     display: block;
@@ -248,5 +258,10 @@
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1;
+  }
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 }

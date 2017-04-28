@@ -19,6 +19,23 @@
     background-color: rgba(51, 51, 61, 1);
 }
 
+.image-slider {
+    &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background-color: #33333d;
+
+        opacity: .55;
+        content: "";
+    }
+}
+
 .image-slider div {
     height: 100%;
 }
@@ -39,7 +56,6 @@
         margin: 0 auto;
     }
 }
-
 
 .text-slider {
     right: 0;
@@ -100,7 +116,7 @@
         height: 5px;
         margin-right: 30px;
 
-        background-color: #d90748;
+        background-color: $red;
 
         content: "";
     }
@@ -203,7 +219,7 @@
                     height: 10px;
                     margin: auto;
 
-                    background-color: #d90748;
+                    background-color: $red;
                     border-radius: 50%;
 
                     content: "";

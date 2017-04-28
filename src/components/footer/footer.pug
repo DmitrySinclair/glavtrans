@@ -24,7 +24,11 @@ footer
 
                 .grid__col.grid__col--50
                     h3.footer__services-title 
-                        a(href="/dist/html/services.html") Услуги
+                        //- a(href="/dist/html/services.html") Услуги 
+                        a.menu__link(href="/dist/html/services.html").
+                                #[span.link__layer.link__layer--footer(data-text="Услуги")]
+                                Услуги
+
                     ul.footer__services
                         li
                             a(href="/dist/html/services-item.html").

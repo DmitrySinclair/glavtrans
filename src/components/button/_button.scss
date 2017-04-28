@@ -13,9 +13,8 @@
 }
 
 .btn {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 2px;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -25,13 +24,13 @@
   width: 100%;
   color: #fff;
   display: block;
-  padding: 24px 0 20px;
+  padding: 8px 0 9px;
 
   &--primary {
-    background-color: #ea003a;
+    background-color: $red;
 
     &:hover {
-      background-color: #ea003a;
+      background-color: $red-hover;
       color: #fff;
     }
   }
@@ -43,7 +42,7 @@
   }
 
   &--fix-width {
-    width: 240px;
+    width: 170px;
   }
 
   &:before {
@@ -80,8 +79,7 @@
   height: 100%;
   width: 140%;
   transform: translate3d(100%,0,0) skew(0deg);
-  // background-color: #111517;
-  background-color: #e00038;
+  background-color: $red-hover;
   opacity: 0;
   transition: transform .5s ease,opacity .3s ease;
   border-radius: 2px;
