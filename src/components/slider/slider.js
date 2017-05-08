@@ -1,6 +1,6 @@
 var textSlider, imageSlider;
 
-(function slider() {
+function slider() {
     // Init text slider
     textSlider = $('.text-slider__cont');
     textSlider.slick({
@@ -25,4 +25,6 @@ var textSlider, imageSlider;
     $('.text-slider__controls').on('click', function() {
         $('.slider').addClass('slider--touched');
     });
-})();
+}
+
+module.exports = slider;

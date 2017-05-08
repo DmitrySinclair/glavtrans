@@ -1,69 +1,38 @@
-var gulp = require('gulp');
-var del = require('del');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var spritesmith = require('gulp.spritesmith');
-var buffer = require('vinyl-buffer');
-var merge = require('merge-stream');
-var rename = require('gulp-rename');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var connect = require('gulp-connect');
-var ftp = require( 'vinyl-ftp' );
-var clean = require('gulp-clean');
+'use strict';
 
-var pug = require('gulp-pug');
-var gulpif = require('gulp-if');
-var emitty = require('emitty').setup('src', 'pug', {
-  makeVinylFile: true
-});
+const gulp = require('gulp'),
+      browserify = require('browserify'),
+      es = require('event-stream'),
+      sass = require('gulp-sass'),
+      sourcemaps = require('gulp-sourcemaps'),
+      autoprefixer = require('gulp-autoprefixer'),
+      imagemin = require('gulp-imagemin'),
+      rename = require('gulp-rename'),
+      concat = require('gulp-concat'),
+      uglify = require('gulp-uglify'),
+      clean = require('gulp-clean'),
+      connect = require('gulp-connect'),
+      source = require('vinyl-source-stream'),
+      buffer = require('vinyl-buffer'),
+      gutil = require('gulp-util'),
 
-var src = 'src';
-var dist = 'dist';
+      pug = require('gulp-pug'),
+      gulpif = require('gulp-if'),
+      emitty = require('emitty').setup('src', 'pug', {
+        makeVinylFile: true
+      }),
+
+      src = 'src',
+      dist = 'dist';
 
 
 // *********************************
 // ---------Clean
 // *********************************
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   return gulp.src('dist', {read: false})
     .pipe(clean());
-});
-
-
-
-// *********************************
-// ---------Build sprite
-// *********************************
-
-gulp.task('sprite:clean', function() {
-  return del([
-    dist + '/img/sprite.*',
-    src + '/scss/_sprite.scss'
-  ]);
-});
-
-gulp.task('sprite', gulp.series('sprite:clean') , function() {
-  var spriteData = gulp.src( src + '/img/sprite/*.png' )
-    .pipe(spritesmith({
-      imgName: 'sprite.png',
-      imgPath: '../img/sprite/sprite.png',
-      cssName: '_sprite.scss',
-      cssFormat: 'scss'
-    }));
-
-  var imgStream = spriteData.img
-    .pipe(buffer())
-    .pipe(imagemin())
-    .pipe(gulp.dest( dist + '/img/sprite' ));
-
-  var cssStream = spriteData.css
-    .pipe(gulp.dest( src + '/scss' ));
-
-  return merge(imgStream, cssStream);
 });
 
 
@@ -72,7 +41,7 @@ gulp.task('sprite', gulp.series('sprite:clean') , function() {
 // --------Compress images
 // *********************************
 
-gulp.task('images', function() {
+gulp.task('images', () => {
   return gulp.src([
     // '!' + src + '/img/*.png',
     src + '/images/**/**'
@@ -87,7 +56,25 @@ gulp.task('images', function() {
 // ----------Compile js
 // *********************************
 
-gulp.task('js:vendor', function() {
+gulp.task('js:main', function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: './src/app/main.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+        .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('dist/app/'));
+});
+
+gulp.task('js:vendor', () => {
   return gulp.src([
     src + '/libs/jquery/jquery-3.1.0.js',
     src + '/libs/slick/slick.js',
@@ -107,27 +94,11 @@ gulp.task('js:vendor', function() {
 
 
 
-gulp.task('js:main', function() {
-  return gulp.src([
-    src + '/components/header/header.js',
-    src + '/components/slider/slider.js',
-    src + '/components/to-top/to-top.js',
-    src + '/components/button/button.js',
-    src + '/components/path/path.js',
-  ])
-  .pipe(concat('main.js'))
-  // .pipe(uglify())
-  .pipe(gulp.dest( dist + '/app' ))
-  .pipe(connect.reload());
-});
-
-
-
 // *********************************
 // --------Compile sass
 // *********************************
 
-gulp.task('sass', function() {
+gulp.task('sass', () => {
   return gulp.src( src + '/main.scss' )
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -178,7 +149,7 @@ gulp.task('pug-templates', () =>
 // ----Update html in livereload
 // *********************************
 
-gulp.task('html', function () {
+gulp.task('html', () => {
   return gulp.src(dist + '/html/*.html')
     .pipe(connect.reload());
 });
@@ -203,7 +174,7 @@ gulp.task('watch:scss', () => {
 });
 
 gulp.task('watch:vendor', () => {
-  gulp.watch( src + '/libs/*.js', gulp.series('js:vendor'));
+  gulp.watch( [src + '/libs/*.js'], gulp.series('js:vendor'));
 });
 
 gulp.task('watch:js', () => {
@@ -230,7 +201,7 @@ gulp.task('watch', gulp.parallel(
 // ----------Dev server
 // *********************************
 
-gulp.task('server', function() {
+gulp.task('server', () => {
   connect.server({
     livereload: true
   });
@@ -242,4 +213,4 @@ gulp.task('server', function() {
 // ----------Default task
 // *********************************
 
-gulp.task('default', gulp.parallel('server', 'clean-and-build', 'watch'));
+gulp.task('default', gulp.parallel('server', 'build', 'watch'));

@@ -1,4 +1,4 @@
-(function handleButton() {
+function handleButton() {
     var button = document.querySelectorAll('.button:not(.button--form)');
     if (button.length) {
         for (var i = 0; i < button.length; i++) {
@@ -7,4 +7,6 @@
             }, false);
         }
     }
-})();
+}
+
+module.exports = handleButton;

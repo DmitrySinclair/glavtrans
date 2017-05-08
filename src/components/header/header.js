@@ -1,4 +1,4 @@
-(function handleMenu() {
+function handleMenu() {
     $('.main-buttons__menu, .hidden-menu__close').on('click', toggleMenu)
         .add('.hidden-menu').on('click', preventClose);
 
@@ -35,24 +35,6 @@
     function preventClose(e) {
         e.stopPropagation();
     }
-})();
+}
 
-(function fixedMenu() {
-    // Enable fix/hide effects on 200 scroll
-    scrollFromTop.start(200, '.top-menu', 'top-menu--fixed');
-    scrollFromTop.start(200, '.header', 'header--scrolled');
-
-    // Trigger fix/hide state
-    var header = document.querySelector('.header');
-    var myElement = document.querySelector(".top-menu");
-    var headroom  = new Headroom(myElement, {
-        tolerance: 10,
-        onPin : function() {
-            header.classList.add('header--empty');
-        },
-        onUnpin : function() {
-            header.classList.remove('header--empty');
-        },
-    });
-    headroom.init();
-})/*()*/; // Just disable fixed menu here
+module.exports = handleMenu;

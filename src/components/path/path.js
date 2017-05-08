@@ -1,6 +1,6 @@
 var pathTimeline;
 
-(function animatePath() {
+function animatePath() {
     var paths = [
         {
             selector: "#path-1",
@@ -48,4 +48,6 @@ var pathTimeline;
             imageSlider.slick('slickNext');
         }
     }
-})();
+}
+
+module.exports = animatePath;
