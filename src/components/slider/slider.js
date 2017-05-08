@@ -1,6 +1,7 @@
-var textSlider, imageSlider;
 
 function slider() {
+    window.textSlider = window.imageSlider = null;
+    
     // Init text slider
     textSlider = $('.text-slider__cont');
     textSlider.slick({

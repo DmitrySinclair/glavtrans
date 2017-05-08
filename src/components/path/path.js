@@ -1,6 +1,6 @@
-var pathTimeline;
-
 function animatePath() {
+    window.pathTimeline = null;
+
     var paths = [
         {
             selector: "#path-1",
