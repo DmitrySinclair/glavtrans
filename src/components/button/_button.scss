@@ -46,6 +46,15 @@
     width: 170px;
   }
 
+  &--fix-width-small {
+    width: 140px;
+  }
+
+  &--big {
+    width: 240px;
+    padding: 20px 0 21px;
+  }
+
   &:before {
     position: absolute;
 

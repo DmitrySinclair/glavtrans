@@ -80,7 +80,7 @@ gulp.task('js:vendor', () => {
     src + '/libs/slick/slick.js',
     src + '/libs/scroll/scroll.js',
     // src + '/libs/headroom/headroom.js',
-    // src + '/libs/fancybox3/jquery.fancybox.min.js',
+    src + '/libs/fancybox3/jquery.fancybox.min.js',
     // src + '/libs/baron/baron.js',
     // src + '/libs/scrollreveal/scrollreveal.min.js',
     src + '/libs/gsap/TweenMax.min.js',

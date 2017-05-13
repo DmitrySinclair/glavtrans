@@ -205,6 +205,7 @@
 }
 
 .tooltip {
+    z-index: 1;
     position: absolute;
     left: 24px;
     top: -200px;
@@ -289,4 +290,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.agreement-modal #agreement-text {
+    width: 830px;
+    padding: 57px 30px 60px;
+}
+
+.agreement-modal .fancybox-close-small {
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: $red url('../images/form/close-modal.png') no-repeat center;
+    color: transparent;
+    font-size: 0;
+    border-radius: 0;
+
+    &:hover {
+        background-color: $red-hover;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.agreement-modal .modal-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.agreement-modal .modal-header {
+    margin: 0 0 1.6em;
 }

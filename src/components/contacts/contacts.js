@@ -5,17 +5,18 @@ function contactsMap(){
                 myIcon;
 
             map = DG.map('map', {
-                center: [52.2797, 104.260],
-                zoom: 16,
+                center: [52.257533, 104.361261],
+                zoom: 16.33,
                 scrollWheelZoom: false
             });
 
             myIcon = DG.icon({
-                iconUrl: '/dist/images/contacts/map-pin-silhouette.png',
+                iconUrl: '/dist/images/form/marker.png',
                 iconSize: [24, 32],
                 iconAnchor: [12, 32]
             });
-            DG.marker([52.279518, 104.255206], {
+            
+            DG.marker([52.257533, 104.361261], {
                 icon: myIcon
             }).addTo(map);
         });

@@ -12,6 +12,10 @@ html, body {
 h1, h2, h3, h4 {
   color: $dark-blue;
   line-height: 1;
+
+  &.h-upper {
+    text-transform: uppercase;
+  }
 }
 
 h1, h2 {
@@ -67,6 +71,10 @@ h3 {
 h4 {
   margin: 3em 0 2em;
   font-size: 1.25rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 p,
@@ -74,10 +82,27 @@ p,
   color: $black;
   font-size: 1.125rem;
   line-height: 1.3333;
+
+  a {
+    color: $light-blue;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 p {
   margin: 1.3333em 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.high-line {
+    line-height: 1.6666;
+  }
 }
 
 .u-list {

@@ -1,19 +1,37 @@
-$gutter: 2.564102564%;
+$gutter: 1.875rem;
 
-.grid__row {
+.grid-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -$gutter;
 }
 
-.grid__col {
-    margin-right: $gutter;
-
-    &--25 {
-        flex-basis: calc(25% - #{$gutter});
+.grid-col {
+    &-3,
+    &-4,
+    &-6,
+    &-8 {
+        padding-right: $gutter;
     }
 
-    &--50 {
-        flex-basis: calc(50% - #{$gutter});
+    &-3 {
+        flex-basis: 25%;
+        max-width: 25%;
     }
+
+    &-4 {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    &-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    &-8 {
+        flex-basis: 66.66666%;
+        max-width: 66.66666%;
+    }
+
 }

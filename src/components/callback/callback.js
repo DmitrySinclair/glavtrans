@@ -38,6 +38,16 @@ function callbackForm() {
         handleButtonsActivity();
     });
 
+    // Agreement modal
+    $('#agreement-link').fancybox({
+		baseClass : 'agreement-modal',
+        focus: false,
+	});
+
+    $('#close-agreement').on('click', function() {
+        $.fancybox.close();
+    });
+
     // On form submit
     form.on('submit', function(e) {
         e.preventDefault();
