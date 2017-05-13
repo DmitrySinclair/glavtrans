@@ -25,11 +25,12 @@
   color: #fff;
   display: block;
   padding: 8px 0 9px;
+  cursor: pointer;
 
   &--primary {
     background-color: $red;
 
-    &:hover {
+    &:hover:not(.btn--disabled) {
       background-color: $red-hover;
       color: #fff;
     }
@@ -53,7 +54,7 @@
     content: attr(data-text);
   }
 
-  &:hover {
+  &:hover:not(.btn--disabled) {
     &:before {
       color: #fff;
       transform: translateZ(0);
@@ -90,4 +91,29 @@
   transition: opacity .25s ease,transform .25s ease;
   z-index: 1;
   display: inline-block;
+}
+
+
+.btn--disabled {
+  cursor: default;
+  background-color: $gray;
+}
+
+.btn--white {
+  background-color: #fff;
+  border: 1px solid #{$gray};
+  color: $gray;
+
+  &:hover:not(.btn--disabled) {
+    background-color: #fff;
+  }
+
+  .btn__overlay {
+    background-color: $gray;
+  }
+}
+
+.btn__wrap--hidden {
+  visibility: hidden;
+  opacity: 0;
 }

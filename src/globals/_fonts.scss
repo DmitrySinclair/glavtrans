@@ -8,3 +8,103 @@ html, body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
 }
+
+h1, h2, h3, h4 {
+  color: $dark-blue;
+  line-height: 1;
+}
+
+h1, h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h3 {
+  &.h-line {
+    position: relative;
+    padding-left: 100px;
+
+    &:before {
+      position: absolute;
+      top: 0.58em;
+      left: 0;
+
+      display: block;
+      width: 70px;
+      height: 5px;
+
+      background-color: $red;
+
+      content: "";
+    }
+  }
+}
+
+h1 {
+  margin: 0 0 1.6em;
+  font-size: 3.125rem;
+
+  &.h-line:before {
+    top: 0.75em;
+  }
+}
+
+h2 {
+  margin: 2em 0 1.3333em;
+  font-size: 1.875rem;
+}
+
+h3, h4 {
+  font-weight: 600;
+}
+
+h3 {
+  margin: .8em 0 2.5em;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin: 3em 0 2em;
+  font-size: 1.25rem;
+}
+
+p,
+.u-list li {
+  color: $black;
+  font-size: 1.125rem;
+  line-height: 1.3333;
+}
+
+p {
+  margin: 1.3333em 0;
+}
+
+.u-list {
+  padding: 0 0 0 6.25em;
+  margin: 2.5em 0 0;
+
+  list-style: none;
+
+  li {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6666em;
+    }
+
+    &:before {
+      position: absolute;
+      left: -20px;
+      top: .5em;
+
+      display: block;
+      width: 5px;
+      height: 5px;
+
+      background-color: $red;
+
+      content: "";
+    }
+  }
+}

@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Контакты")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Контакты")
+            main.inner-page
+                include ../components/contacts/contacts
+
+            include ../components/footer/footer

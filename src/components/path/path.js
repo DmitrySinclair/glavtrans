@@ -1,29 +1,31 @@
 function animatePath() {
-    window.pathTimeline = null;
+    if ($('#path-1').length) {
+        window.pathTimeline = null;
 
-    var paths = [
-        {
-            selector: "#path-1",
-            speed: 10
-        },
-        {
-            selector: "#path-2",
-            speed: 6.5
-        },
-        {
-            selector: "#path-3",
-            speed: 7.5
+        var paths = [
+            {
+                selector: "#path-1",
+                speed: 10
+            },
+            {
+                selector: "#path-2",
+                speed: 6.5
+            },
+            {
+                selector: "#path-3",
+                speed: 7.5
+            }
+        ];
+
+        // Set links to the next path
+        for (var i = 0; i < paths.length; i++) {
+            paths[i].next = paths[i + 1];
         }
-    ];
+        paths[paths.length - 1].next = paths[0];
 
-    // Set links to the next path
-    for (var i = 0; i < paths.length; i++) {
-        paths[i].next = paths[i + 1];
+        // Start animation loop
+        animate(paths[0]);
     }
-    paths[paths.length - 1].next = paths[0];
-
-    // Start animation loop
-    animate(paths[0]);
 
     function animate(path) {
         var values = MorphSVGPlugin.pathDataToBezier(path.selector);

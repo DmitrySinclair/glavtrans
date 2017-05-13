@@ -1,0 +1,49 @@
+include ../button/button
+
+form.callback#callback
+    .callback__form-wrap#callback-form
+        h4.callback__title Получить более подробную консультацию
+
+        .callback__form-content
+            .callback__field
+                label(for="callback-name") Как к вам обращаться?
+                input#callback-name(type="name")
+                p.callback__placeholder
+                    span.callback__ok Например: Александр Мол
+                    span.callback__error Неверно указано имя
+
+            .callback__field
+                label(for="callback-num") Контактный телефон
+                input#callback-num(type="name")
+                p.callback__placeholder
+                    span.callback__ok Например: +7 (123) 456 78 90
+                    span.callback__error Неверно указан номер телефона
+            
+            .callback__agreement
+                input(type="checkbox", id="agreement")
+                label(for="agreement") 
+                    span #[a#agreement-link(href="agreement.html", target="_blank") Соглашение] на обработку своих персональных данных 
+                    i.callback__agreement-info
+                        .tooltip.
+                            Ваши персональные данные будут использованы только компанией «ГлавТранс» 
+                            для связи с вами и не будут переданы третьим лицам.
+
+            .callback__buttons
+                .callback__submit
+                    +button("", "отправить")(class="btn btn--primary btn--fix-width btn--disabled", id="callback-submit", type="submit")
+                    p.tooltip.callback__tooltip#callback-tooltip-name «Вы забыли#[br] представиться»
+                    p.tooltip.callback__tooltip#callback-tooltip-num «Вы забыли указать#[br] контактный телефон»
+                    p.tooltip.callback__tooltip#callback-tooltip-agree «Вы забыли принять#[br] соглашение»
+
+                .callback__cancel
+                    +button("", "отменить", true)(class="btn btn--primary btn--fix-width btn--white btn--hidden", id="callback-cancel")
+
+    .callback__form-wrap#callback-success(style="display: none;")
+        h4.callback__title.callback__title--success Важа заявка принята!
+
+        .callback__form-content.callback__form-content--success
+            p.callback__success-text.
+                В ближайшее время наш менеджер
+                свяжется с вами
+
+            +button("", "закрыть")(class="btn btn--primary btn--fix-width", id="callback-close-success")

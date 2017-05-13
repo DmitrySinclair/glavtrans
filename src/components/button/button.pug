@@ -1,5 +1,7 @@
-mixin button(href, name)
-    div.btn__wrap
+mixin button(href, name, hidden)
+    - var classes = ['btn__wrap']
+    - if (hidden) classes.push('btn__wrap--hidden')
+    div(class=classes)
         if href.length > 0
             a(href=href, class!=attributes.class, data-text=name)
                 span.btn__overlay

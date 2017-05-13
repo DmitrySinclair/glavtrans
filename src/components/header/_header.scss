@@ -3,14 +3,27 @@
     height: 100vh;
     position: relative;
   }
+
+  &:not(&--main) {
+    background-color: $dark-blue;
+
+    .main-logo {
+      svg {
+        width: 70px;
+      }
+    }
+
+    .top-menu__content {
+      height: 120px;
+    }
+  }
 }
 
 .top-menu__content {
   position: relative; 
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 70px 0;
+  align-items: center;
   height: 240px;
 }
 
@@ -116,13 +129,6 @@
       pointer-events: none;
     }
   }
-}
-
-.top-menu__content {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .main-buttons__menu {

@@ -85,6 +85,7 @@ gulp.task('js:vendor', () => {
     // src + '/libs/scrollreveal/scrollreveal.min.js',
     src + '/libs/gsap/TweenMax.min.js',
     src + '/libs/gsap/MorphSVGPlugin.min.js',
+    src + '/libs/inputmask/jquery.inputmask.bundle.min.js'
   ])
   .pipe(concat('vendor.js'))
   .pipe(uglify())
