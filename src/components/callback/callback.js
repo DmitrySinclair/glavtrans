@@ -40,7 +40,7 @@ function callbackForm() {
 
     // Agreement modal
     $('#agreement-link').fancybox({
-		baseClass : 'agreement-modal',
+		baseClass : 'modal',
         focus: false,
 	});
 

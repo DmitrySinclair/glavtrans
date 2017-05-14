@@ -46,6 +46,10 @@ h3 {
   }
 }
 
+h3.h-line:before {
+  top: 0.75em;
+}
+
 h1 {
   margin: 0 0 1.6em;
   font-size: 3.125rem;
@@ -67,6 +71,7 @@ h3, h4 {
 h3 {
   margin: .8em 0 2.5em;
   font-size: 1.5rem;
+  line-height: 1.25;
 }
 
 h4 {
@@ -96,6 +101,13 @@ p,
 
 p {
   margin: 1.3333em 0;
+
+  &.box {
+    margin: 3.33333em 0;
+    background-color: $gray;
+    padding: 1.66666em;
+    color: #fff;
+  }
 
   &:last-child {
     margin-bottom: 0;

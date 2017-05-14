@@ -1,0 +1,39 @@
+.services {
+    margin-top: 0;
+    margin-bottom: -10px;
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    margin-bottom: 10px;
+}
+
+.services li a {
+    display: flex;
+    align-items: center;
+    min-height: 3.888888889em;
+    padding: 10px 20px;
+
+    font-size: 1.125rem;
+    color: $black;
+    font-weight: 600;
+    line-height: 1.3333;
+
+    border: 1px solid $lighter-gray;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    transition: .15s ease;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        color: $red;
+        outline: none;
+    }
+
+    &.active {
+        background-color: $light-gray;
+        color: $red;
+    }
+}

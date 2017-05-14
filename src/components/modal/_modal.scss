@@ -1,0 +1,36 @@
+.modal .modal-content {
+    width: 830px;
+    padding: 57px 30px 60px;
+
+    &--wide {
+        width: 1200px;
+    }
+}
+
+.modal .fancybox-close-small {
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: $red url('../images/form/close-modal.png') no-repeat center;
+    color: transparent;
+    font-size: 0;
+    border-radius: 0;
+
+    &:hover {
+        background-color: $red-hover;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.modal .modal-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.modal .modal-header {
+    margin: 0 0 1.6em;
+}

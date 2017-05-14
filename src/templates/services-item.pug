@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Услуги")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Услуги", "Консультационные, платежно-финансовые услуги по перевозкам и оформлению документов", "services.html")
+            main.inner-page
+                include ../components/services-item/services-item
+
+            include ../components/footer/footer

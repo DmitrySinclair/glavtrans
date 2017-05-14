@@ -1,0 +1,24 @@
+.services-item__figure {
+    margin: 0;
+}
+
+.services-item__figure div {
+    height: 248px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.services-item__figure figcaption {
+    color: $dark-blue;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.toogle-services {
+    border-bottom: 1px solid $gray;
+    margin-bottom: 40px;
+    padding-bottom: 60px;
+}
