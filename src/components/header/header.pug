@@ -26,5 +26,7 @@ mixin header(isMain, pageName, secondDepthName, secondDepthLink)
 
         if isMain
             include ../slider/slider
-        else
-            //- .template-width.header__page-info
+            
+    if !isMain
+        include ../breadcrumbs/breadcrumbs
+        +breadcrumbs(pageName, secondDepthName, secondDepthLink)

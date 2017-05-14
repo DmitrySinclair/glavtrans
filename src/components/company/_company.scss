@@ -1,0 +1,52 @@
+.company__benefits,
+.company__employees {
+    margin-bottom: -60px;
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.company__benefits li,
+.company__employees li {
+    margin-bottom: 60px;
+}
+
+.company__benefits figure,
+.company__employees figure {
+    margin: 0;
+}
+
+.company__benefits figure div {
+    height: 100px;
+    margin-bottom: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.company__benefits figcaption {
+    color: $black;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.3333;
+    text-align: center;
+}
+
+.company__employees h5 {
+    margin: 0 0 .5em;
+    color: $dark-blue;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+
+.company__employees p {
+    margin: 0;
+}
+
+.company__employees figure div {
+    margin-bottom: 20px;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+}

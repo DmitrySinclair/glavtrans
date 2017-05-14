@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("О компании")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "О компании")
+            main.inner-page
+                include ../components/company/company
+
+            include ../components/footer/footer

@@ -1,0 +1,17 @@
+mixin breadcrumbs(page, secondDepthName, secondDepthLink)
+    .breadcrumbs__wrap
+        .breadcrumbs.template-width
+            a.breadcrumbs__el(href="/dist/html/index.html")
+                include ../../images/svg/bread-arr-1.svg
+                span Главная
+            if secondDepthName
+                a.breadcrumbs__el(href=secondDepthLink)
+                    include ../../images/svg/bread-arr.svg
+                    span= page
+                span.breadcrumbs__el
+                    include ../../images/svg/bread-arr.svg
+                    span= secondDepthName
+            else
+                span.breadcrumbs__el
+                    include ../../images/svg/bread-arr.svg
+                    span= page

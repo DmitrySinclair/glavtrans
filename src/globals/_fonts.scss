@@ -4,7 +4,9 @@ html, body {
 }
 
 .text-slider__title-main,
-.hidden-nav:not(.hidden-nav--footer) a {
+.hidden-nav:not(.hidden-nav--footer) a,
+h1, 
+h2 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
 }
@@ -19,7 +21,6 @@ h1, h2, h3, h4 {
 }
 
 h1, h2 {
-  font-weight: 700;
   text-transform: uppercase;
 }
 

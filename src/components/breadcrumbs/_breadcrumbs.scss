@@ -1,0 +1,49 @@
+.breadcrumbs__wrap {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: $lighter-gray;
+}
+
+.breadcrumbs {
+  color: $dark-blue;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.1111;
+
+  .breadcrumbs__el {
+    display: inline-block;
+    transition: .2s ease-in;
+
+    &:not(:last-child) {
+      margin-right: 1.25rem;
+    }
+
+    svg,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    svg {
+      margin-right: 1.25rem;
+    }
+
+    path {
+      fill: $dark-blue;
+      transition: .2s ease-in;
+    }
+  }
+
+  a.breadcrumbs__el:hover {
+    path,
+    & {
+      opacity: .85;
+      transition: .25s ease-out;
+    }
+  }
+
+  span.breadcrumbs__el {
+    color: $gray;
+  }
+}
