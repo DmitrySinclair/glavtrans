@@ -1,0 +1,12 @@
+doctype html
+html
+    include ./include/head.pug
+    +head("Отзывы")
+    body
+        .wrapper
+            include ../components/header/header
+            +header(false, "Отзывы")
+            main.inner-page
+                include ../components/reviews/reviews
+
+            include ../components/footer/footer
