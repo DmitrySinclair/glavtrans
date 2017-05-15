@@ -11,7 +11,7 @@ function contactsMap(){
             });
 
             myIcon = DG.icon({
-                iconUrl: '/dist/images/form/marker.png',
+                iconUrl: '../images/form/marker.png',
                 iconSize: [24, 32],
                 iconAnchor: [12, 32]
             });
