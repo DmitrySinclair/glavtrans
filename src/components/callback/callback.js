@@ -99,7 +99,7 @@ function callbackForm() {
 
     function applyMask(field) {
         field.inputmask({
-            mask: "+7 (999) 999 99",
+            mask: "+7 (999) 999 99 99",
             androidHack: "rtfm"
         });
     }
@@ -108,7 +108,7 @@ function callbackForm() {
         var timer,
             interval = 500;
 
-        input.on('keydown', function(){
+        input.on('input', function(){
             clearTimeout(timer);
             if (input.val()) {
                 timer = setTimeout(done, interval);
@@ -134,7 +134,7 @@ function callbackForm() {
         handleButtonsActivity();
 
         function validateName( _input ) {
-            var reg_name = /^[_a-zA-Z0-9а-яА-ЯёЁ ]+$/i;
+            var reg_name = /^[_a-zA-Zа-яА-ЯёЁ ]+$/i;
 
             var result = reg_name.test( _input.val().trim() );
 

@@ -17,9 +17,11 @@
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
         transition: .15s ease;
+        filter: grayscale(100%);
 
         &:hover {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            filter: grayscale(0);
         }
     }
 }
