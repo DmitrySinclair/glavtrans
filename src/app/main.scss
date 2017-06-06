@@ -1,0 +1,29 @@
+// Globals
+@import "../globals/normalize";
+@import "../globals/variables";
+@import "../globals/fonts";
+@import "../globals/general";
+@import "../globals/grid";
+
+// Libs
+@import "../libs/slick/slick";
+@import "../libs/fancybox3/jquery.fancybox.min";
+@import "../libs/baron/baron";
+
+// Components
+@import "../components/header/header";
+@import "../components/slider/slider";
+@import "../components/button/button";
+@import "../components/footer/footer";
+@import "../components/to-top/to-top";
+@import "../components/hidden-menu/hidden-menu";
+@import "../components/callback/callback";
+@import "../components/contacts/contacts";
+@import "../components/breadcrumbs/breadcrumbs";
+@import "../components/company/company";
+@import "../components/tabs/tabs";
+@import "../components/services/services";
+@import "../components/services-item/services-item";
+@import "../components/modal/modal";
+@import "../components/reviews/reviews";
+@import "../components/to-top/to-top";

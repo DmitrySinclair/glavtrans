@@ -100,7 +100,7 @@ gulp.task('js:vendor', () => {
 // *********************************
 
 gulp.task('sass', () => {
-  return gulp.src( src + '/main.scss' )
+  return gulp.src( src + '/app/main.scss' )
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({browsers: '> 0.1%'}))
